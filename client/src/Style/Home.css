@@ -1,0 +1,216 @@
+.home {
+  width: calc(100vw - 400px);
+  height: calc(100vh - 60px);
+  overflow-y: hidden;
+  height: fit-content;
+  margin-top: 60px;
+  padding-bottom: 100px;
+  position: relative;
+}
+
+.games {
+  position: relative;
+  top: 100px;
+  width: 100%;
+  left: 2vw;
+  display: flex;
+  max-width: calc(100% - 4vw);
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.game,
+.plinko {
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game {
+  display: table-cell;
+  text-decoration: none;
+}
+
+.plinko {
+  display: table-cell;
+}
+
+.text {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  top: 1%;
+  text-align: center;
+}
+
+@media all and (min-width: 1300px) {
+  .table {
+    position: relative;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+    left: 3%;
+    width: calc(100vw - 400px);
+  }
+
+  .table table {
+    margin-right: 0;
+  }
+
+  .table td,
+  .table th {
+    min-width: calc(calc(calc(100vw - 400px) / 7) - 1vw);
+  }
+
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
+
+  .game,
+  .plinko {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+  }
+
+  .img {
+    box-shadow: 0px 3px 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .table td,
+  .table th {
+    min-width: calc(calc(100vw - 10vw) / 4);
+    max-width: calc(100vw / 4);
+    overflow: hidden;
+  }
+}
+
+@media all and (max-width: 1300px) and (min-width: 600px) {
+  .home {
+    width: 100vw;
+  }
+
+  .table {
+    position: relative;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    margin-bottom: 100px;
+    left: 2%;
+  }
+
+  .table td,
+  .table th {
+    min-width: calc(calc(100vw - 10vw) / 7);
+    max-width: calc(100vw / 7);
+    overflow: hidden;
+  }
+
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }
+
+  .game,
+  .plinko {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+  }
+
+  .img {
+    box-shadow: 0px 3px 20px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    width: 150px;
+  }
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--global-grey);
+  text-align: left;
+  padding: 10px 0;
+  height: 50px;
+}
+
+.table-row:first-child {
+  animation: row-in 0.5s 1 forwards linear;
+}
+
+.table-row:not(first-child) {
+  animation: other-rows 0.5s 1 forwards linear;
+}
+
+@keyframes row-in {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes other-rows {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.info-titles,
+.info-contents {
+  display: flex;
+}
+
+.info-contents > div,
+.info-titles > div {
+  width: 75px;
+  margin: 10px;
+  text-align: center;
+}
+
+.bet-info {
+  display: flex;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+}
+
+.bet-info > div {
+  width: 75px;
+  margin: 10px;
+  text-align: center;
+}
+
+th,
+td {
+  color: white;
+}
+
+.MuiButton-label {
+  color: white !important;
+}
+
+.MuiInput-root::before,
+.MuiInput-root::after {
+  border-color: white !important;
+}
+
+.MuiSvgIcon-root {
+  color: white !important;
+}
+
+.select-val {
+  color: white !important;
+}

@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "./static/css/main.8ca0a674.chunk.css",
+    "main.js": "./static/js/main.e042793c.chunk.js",
+    "main.js.map": "./static/js/main.e042793c.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.b2841c75.js",
+    "runtime-main.js.map": "./static/js/runtime-main.b2841c75.js.map",
+    "static/js/2.be4f0d23.chunk.js": "./static/js/2.be4f0d23.chunk.js",
+    "static/js/2.be4f0d23.chunk.js.map": "./static/js/2.be4f0d23.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.aee6e919c4e0059b9ef8e790ad95a32a.js": "./precache-manifest.aee6e919c4e0059b9ef8e790ad95a32a.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.8ca0a674.chunk.css.map": "./static/css/main.8ca0a674.chunk.css.map",
+    "static/js/2.be4f0d23.chunk.js.LICENSE.txt": "./static/js/2.be4f0d23.chunk.js.LICENSE.txt",
+    "static/media/Logo.png": "./static/media/Logo.0731c6fa.png",
+    "static/media/LoseSoundDice.wav": "./static/media/LoseSoundDice.61f8ab08.wav",
+    "static/media/WinSoundDice.wav": "./static/media/WinSoundDice.1a8c9c50.wav",
+    "static/media/beepSound.wav": "./static/media/beepSound.5021d40a.wav",
+    "static/media/index.scss": "./static/media/blackjack.f4f46b05.svg",
+    "static/media/blackjackSound.wav": "./static/media/blackjackSound.20370bcf.wav",
+    "static/media/blackjackVid.mp4": "./static/media/blackjackVid.64b82332.mp4",
+    "static/media/clickSound.wav": "./static/media/clickSound.dcdb6e5a.wav",
+    "static/media/CoinDuels.css": "./static/media/cointails.b2a6c157.png",
+    "static/media/crashVid.mp4": "./static/media/crashVid.c34cf25a.mp4",
+    "static/media/diceVid.mp4": "./static/media/diceVid.79f44180.mp4",
+    "static/media/plinko.mp4": "./static/media/plinko.ca2c001d.mp4",
+    "static/media/rain.gif": "./static/media/rain.190136f6.gif",
+    "static/media/roulette.mp4": "./static/media/roulette.b4dd3a4d.mp4",
+    "static/media/rouletteSound.wav": "./static/media/rouletteSound.05feaff1.wav",
+    "static/media/wheel.png": "./static/media/wheel.ebb9e71d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2841c75.js",
+    "static/js/2.be4f0d23.chunk.js",
+    "static/css/main.8ca0a674.chunk.css",
+    "static/js/main.e042793c.chunk.js"
+  ]
+}

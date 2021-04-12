@@ -1,0 +1,28 @@
+.settings-wrapper {
+  position: relative;
+  width: calc(100vw - 200px);
+  height: 100vh;
+}
+
+.settings {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.settings-header {
+  color: white;
+}
+
+#update-password {
+  background-color: green;
+}
+
+.MuiInputBase-root {
+  color: white !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}

@@ -1,0 +1,62 @@
+.chat-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--chat-footer-background);
+}
+
+.chat-text-area-wrapper {
+  position: absolute;
+  bottom: 60px;
+  left: 0.8vw;
+}
+
+.chat-text-area {
+  width: 370px;
+  height: 30px;
+  resize: none;
+  font-size: 15px;
+  background-color: var(--dark-background);
+  border: none;
+  border-radius: 2px;
+  color: var(--global-black);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5px;
+}
+
+.under-chat-text {
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.MuiButton-label {
+  color: var(--global-black);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.char-count {
+  position: absolute;
+  right: 90px;
+  bottom: 10px;
+  color: var(--global-black);
+}
+
+.send {
+  position: absolute;
+  right: 10px;
+  bottom: 0;
+  background-color: var(--submit);
+  border-radius: 5px;
+}
+
+.send:hover {
+  background-color: var(--submit-active);
+}
+
+.MuiFormHelperText-root {
+  color: white !important;
+}

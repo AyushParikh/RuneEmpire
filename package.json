@@ -1,0 +1,27 @@
+{
+  "name": "osrscasino",
+  "version": "1.0.0",
+  "description": "OSRSCasino website",
+  "main": "index.js",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.11",
+    "react-bootstrap": "^0.32.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "concurrently \"cd client && npm start\" \"cd server && npm start\"",
+    "prod": "set NODE_ENV=production && concurrently \"cd client && npm start\" \"cd server && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/Alpha-Infinity/osrscasino.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Alpha-Infinity/osrscasino/issues"
+  },
+  "homepage": "https://gitlab.com/Alpha-Infinity/osrscasino#readme"
+}

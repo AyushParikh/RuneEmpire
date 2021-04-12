@@ -1,0 +1,326 @@
+.roulette-game {
+  position: relative;
+  width: 900px;
+  height: 600px;
+}
+
+.bet-tiles {
+  height: 250px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+.zeros {
+  position: absolute;
+  height: 60%;
+  width: 40px;
+  display: block;
+}
+
+.zero {
+  position: relative;
+  height: 50%;
+  width: 40px;
+  margin: 1px;
+  border-radius: 5px;
+  background-color: #419e3f;
+  color: white;
+  border: none;
+  box-shadow: 0px 3px 10px grey;
+  cursor: pointer;
+}
+
+.zero:hover {
+  background-color: #67a866;
+}
+
+.top-row,
+.middle-row,
+.bottom-row {
+  position: absolute;
+  left: 42px;
+  height: calc(20% - 2px);
+  width: calc(100% - 40px);
+}
+
+.numbers {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+.number {
+  margin: 1px;
+  width: calc(100% / 13);
+  border: none;
+  border-radius: 5px;
+  height: 100%;
+  cursor: pointer;
+  color: white;
+  position: relative;
+}
+
+.two-one {
+  background-color: #bb9f79;
+  border: 2px solid #43525c;
+}
+
+.two-one:hover {
+  background-color: #c2b198;
+}
+
+.middle-row {
+  top: calc(20% + 2px);
+}
+
+.bottom-row {
+  top: calc(40% + 4px);
+}
+
+.thirds-odds,
+.small-odds {
+  position: absolute;
+  top: calc(60% + 4px);
+  display: flex;
+  left: 42px;
+  width: calc(100% - 40px);
+  height: 20%;
+}
+
+.third,
+.small {
+  width: 33%;
+  border: none;
+  border-radius: 5px;
+  margin: 1px;
+  color: white;
+  background-color: #bb9f79;
+  border: 2px solid #43525c;
+  cursor: pointer;
+  position: relative;
+}
+
+.third:hover,
+.small:hover {
+  background-color: #c2b198;
+}
+
+.small-odds {
+  top: calc(80% + 4px);
+}
+
+.red {
+  background-color: #fe2247;
+}
+
+.red:hover {
+  background-color: #f84664;
+}
+
+.black {
+  background-color: #2f4553;
+}
+
+.black:hover {
+  background-color: #4e6777;
+}
+
+button {
+  outline: none;
+}
+
+.coin-roulette {
+  position: absolute;
+  left: 2px;
+  padding: 5px;
+  width: fit-content;
+  height: fit-content;
+  background-color: yellow;
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 25px;
+}
+
+.clear {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 100px;
+  height: 50px;
+}
+
+.wheel {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 950px) {
+  .roulette-game {
+    width: 90vw !important;
+  }
+
+  .bet-tiles {
+    height: 150px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+
+  .zeros {
+    position: absolute;
+    height: 60%;
+    width: 30px;
+    display: block;
+  }
+
+  .zero {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    margin: 1px;
+    border-radius: 5px;
+    background-color: #419e3f;
+    color: white;
+    border: none;
+    box-shadow: 0px 3px 10px grey;
+    cursor: pointer;
+  }
+
+  .zero:hover {
+    background-color: #67a866;
+  }
+
+  .top-row,
+  .middle-row,
+  .bottom-row {
+    position: absolute;
+    left: 33px;
+    height: calc(20% - 2px);
+    width: calc(100% - 30px);
+  }
+
+  .numbers {
+    position: relative;
+    display: flex;
+    height: 100%;
+    font-size: 10px;
+  }
+
+  .number {
+    margin: 1px;
+    width: calc(100% / 13);
+    border: none;
+    border-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    padding: 0 !important;
+  }
+
+  .two-one {
+    background-color: #bb9f79;
+    border: 2px solid #43525c;
+  }
+
+  .two-one:hover {
+    background-color: #c2b198;
+  }
+
+  .middle-row {
+    top: calc(20% + 2px);
+  }
+
+  .bottom-row {
+    top: calc(40% + 4px);
+  }
+
+  .thirds-odds,
+  .small-odds {
+    position: absolute;
+    top: calc(60% + 4px);
+    display: flex;
+    left: 42px;
+    width: calc(100% - 40px);
+    height: 20%;
+  }
+
+  .third,
+  .small {
+    width: 33%;
+    border: none;
+    border-radius: 5px;
+    margin: 1px;
+    color: white;
+    background-color: #bb9f79;
+    border: 2px solid #43525c;
+    cursor: pointer;
+    position: relative;
+    font-size: 10px;
+  }
+
+  .third:hover,
+  .small:hover {
+    background-color: #c2b198;
+  }
+
+  .small-odds {
+    top: calc(80% + 4px);
+  }
+
+  .red {
+    background-color: #fe2247;
+  }
+
+  .red:hover {
+    background-color: #f84664;
+  }
+
+  .black {
+    background-color: #2f4553;
+  }
+
+  .black:hover {
+    background-color: #4e6777;
+  }
+
+  button {
+    outline: none;
+  }
+
+  .coin-roulette {
+    position: absolute;
+    left: 2px;
+    padding: 2px;
+    width: fit-content;
+    height: fit-content;
+    background-color: yellow;
+    border-radius: 50%;
+    border: 1px solid white;
+    color: white;
+    font-size: 7px;
+    font-weight: bold;
+    min-width: 15px;
+  }
+
+  .clear {
+    position: absolute;
+    bottom: 10px;
+    left: 30px;
+    width: 100px;
+    height: 50px;
+  }
+}

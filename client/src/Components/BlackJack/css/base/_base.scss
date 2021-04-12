@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+}
+
+.app-wrapper {
+  position: relative;
+  left: calc(50% - 200px);
+  margin-top: 150px;
+  margin-bottom: 150px;
+  display: flex;
+  transform: translateX(-50%);
+  background-color: var(--dark-background);
+  width: 1200px;
+  height: 600px;
+  border-radius: 10px;
+}

@@ -1,0 +1,1144 @@
+.dice-page {
+  width: calc(100vw - 400px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+.bet-amount-input {
+  background-color: var(--very-dark-back);
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.bet-input {
+  background-color: var(--dark-background);
+  border: none;
+  height: 70%;
+  margin: 5px 5px;
+  padding: 0 5px;
+  width: 70%;
+}
+
+.bet-input-mult {
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  width: 20%;
+}
+
+.bet-input-mult:hover {
+  background-color: var(--dark-background);
+}
+
+.win-amount {
+  margin: 10px 20px;
+  display: table;
+}
+
+.bet-amount {
+  margin: 10px 20px;
+}
+
+.win-amount-text {
+  width: 130px;
+  background-color: var(--dark-background);
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+
+.bet {
+  margin: 0px 20px;
+}
+
+.bet-button {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #00cc00;
+  border-color: #11cc11;
+}
+
+.slider {
+  position: absolute;
+  background-color: var(--very-dark-back);
+  padding: 0 30px;
+  border-radius: 50px;
+}
+
+.dice-footer-wrapper {
+  position: absolute;
+}
+
+.dice-footer {
+  display: table;
+  table-layout: fixed;
+  border-spacing: 10px;
+  height: 90px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--very-dark-back);
+}
+
+.multiplier,
+.roll-over,
+.win-chance {
+  display: table-cell;
+  width: 40px;
+}
+
+.mult-value,
+.win-value {
+  font: inherit;
+  margin-top: 5px;
+  display: table;
+  background-color: var(--dark-background);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  padding: 0 10px;
+  vertical-align: middle;
+  border-color: var(--background);
+  border-style: inset;
+}
+
+.roll-value {
+  margin-top: 5px;
+  display: table;
+  background-color: var(--dark-background);
+  width: 50px;
+  border-radius: 5px;
+  vertical-align: middle;
+  border: 2px inset;
+  border-color: var(--background);
+}
+
+@media only screen and (max-width: 950px) {
+  .fairness-popup-wrapper {
+    z-index: 100000;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .fairness-popup {
+    width: 90vw !important;
+    height: 60vh !important;
+  }
+
+  .server-seed {
+    top: 15% !important;
+  }
+
+  .client-seed {
+    top: 35% !important;
+  }
+
+  .nonce {
+    top: 55% !important;
+  }
+
+  .server-seed-un {
+    top: 72.5% !important;
+  }
+
+  .client-seed-header {
+    top: 27.5% !important;
+  }
+
+  .nonce-header {
+    top: 47.5% !important;
+  }
+
+  .server-seed-un-header {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+  }
+
+  .change-seed {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--submit);
+    border: none;
+    border-radius: 5px 0 5px 0;
+    width: 70px;
+    height: 40px;
+  }
+
+  .change-seed:hover {
+    background-color: var(--submit-active);
+  }
+
+  .dice-game-wrapper {
+    position: relative;
+    left: 3%;
+    top: 5%;
+    background-color: var(--dark-background);
+    width: 90vw;
+    height: fit-content;
+    border-radius: 10px;
+  }
+
+  .side-bar {
+    position: relative;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: fit-content;
+    padding-bottom: 20px;
+    background-color: var(--dice-sidebar);
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: var(--background);
+    width: 150px;
+  }
+
+  .bet-amount {
+    position: relative;
+    width: 45%;
+    left: 20%;
+    margin-left: 30px;
+    transform: translateX(-50%);
+  }
+
+  .bet-input-mult {
+    width: 30%;
+  }
+
+  .win-amount {
+    position: absolute;
+    top: 40px;
+    left: 70%;
+    transform: translateX(-50%);
+  }
+
+  .reset,
+  .increase-by {
+    width: 35%;
+    font-size: 12px;
+    text-align: left;
+  }
+
+  .stop-win {
+    margin-top: 0;
+  }
+
+  .stop-loss {
+    margin-top: 70px;
+  }
+
+  .num-bets {
+    margin-top: 140px;
+  }
+
+  .on-win {
+    position: relative;
+    width: 50%;
+  }
+
+  .bet {
+    position: relative;
+    left: 0;
+    width: 90%;
+  }
+
+  .dice-game {
+    width: 100%;
+    height: 10;
+    position: relative;
+  }
+
+  .slider {
+    position: relative;
+    width: 90%;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .dice-footer-wrapper {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    margin: 10px;
+  }
+
+  .multiplier,
+  .roll-over,
+  .win-chance {
+    display: table-cell;
+    width: 40px;
+  }
+
+  .mult-value,
+  .win-value {
+    width: 75px;
+  }
+
+  .roll-value {
+    width: 75px;
+    height: 50px;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .dice-page {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 951px) {
+  .dice-game-wrapper {
+    position: relative;
+    left: 3%;
+    top: 20%;
+    display: flex;
+    background-color: var(--dark-background);
+    width: 900px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .score-table-dice {
+    margin-top: 400px !important;
+  }
+
+  .side-bar {
+    background-color: var(--dice-sidebar);
+    width: 40%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-color: var(--background);
+    width: 150px;
+  }
+
+  #manual,
+  #auto {
+    width: 100px;
+  }
+
+  #manual {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #auto {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .bet-amount {
+    margin: 10px 20px;
+  }
+
+  .bet-amount-input {
+    background-color: var(--very-dark-back);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  .bet-input {
+    background-color: var(--dark-background);
+    border: none;
+    height: 70%;
+    margin: 5px 5px;
+    padding: 0 5px;
+    width: 70%;
+  }
+
+  .bet-input-mult {
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 20%;
+  }
+
+  .bet-input-mult:hover {
+    background-color: var(--dark-background);
+  }
+
+  .win-amount {
+    margin: 10px 20px;
+    display: table;
+  }
+
+  .win-amount-text {
+    width: 170px;
+    background-color: var(--dark-background);
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .slider {
+    position: absolute;
+    background-color: var(--very-dark-back);
+    top: 250px;
+    left: 630px;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    border-radius: 50px;
+    width: 45%;
+  }
+
+  .MuiSlider-root {
+    width: 100% !important;
+  }
+
+  .dice-footer-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 630px;
+    width: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dice-footer {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--very-dark-back);
+  }
+
+  .multiplier,
+  .roll-over,
+  .win-chance {
+    display: table-cell;
+    width: 40px;
+  }
+
+  .mult-value,
+  .win-value {
+    font: inherit;
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 100px;
+    border-radius: 5px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border-color: var(--background);
+    border-style: inset;
+  }
+
+  .roll-value {
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    vertical-align: middle;
+    border: 2px inset;
+    border-color: var(--background);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .dice-game-wrapper {
+    position: relative;
+    left: 10%;
+    top: 20%;
+    display: flex;
+    background-color: var(--dark-background);
+    width: 900px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .score-table-dice {
+    margin-top: 400px !important;
+  }
+
+  .side-bar {
+    background-color: var(--dice-sidebar);
+    width: 40%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-color: var(--background);
+    width: 150px;
+  }
+
+  #manual,
+  #auto {
+    width: 100px;
+  }
+
+  #manual {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #auto {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .bet-amount {
+    margin: 10px 20px;
+  }
+
+  .bet-input {
+    background-color: var(--dark-background);
+    border: none;
+    height: 70%;
+    margin: 5px 5px;
+    padding: 0 5px;
+    width: 70%;
+  }
+
+  .bet-input-mult {
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 20%;
+  }
+
+  .bet-input-mult:hover {
+    background-color: var(--dark-background);
+  }
+
+  .win-amount {
+    margin: 10px 20px;
+    display: table;
+  }
+
+  .win-amount-text {
+    width: 170px;
+    background-color: var(--dark-background);
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+  .slider {
+    position: absolute;
+    background-color: var(--very-dark-back);
+    top: 250px;
+    left: 630px;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    border-radius: 50px;
+    width: 45%;
+  }
+
+  .MuiSlider-root {
+    width: 100% !important;
+  }
+
+  .dice-footer-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 630px;
+    width: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dice-footer {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--very-dark-back);
+  }
+
+  .multiplier,
+  .roll-over,
+  .win-chance {
+    display: table-cell;
+    width: 40px;
+  }
+
+  .mult-value,
+  .win-value {
+    font: inherit;
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 100px;
+    border-radius: 5px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border-color: var(--background);
+    border-style: inset;
+  }
+
+  .roll-value {
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    vertical-align: middle;
+    border: 2px inset;
+    border-color: var(--background);
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .dice-game-wrapper {
+    position: relative;
+    left: 10%;
+    top: 20%;
+    display: flex;
+    background-color: var(--dark-background);
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .side-bar {
+    background-color: var(--dice-sidebar);
+    width: 25%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-color: var(--background);
+    width: 150px;
+  }
+
+  #manual,
+  #auto {
+    width: 100px;
+  }
+
+  #manual {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #auto {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .slider {
+    position: absolute;
+    background-color: var(--very-dark-back);
+    top: 250px;
+    left: 500px;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    border-radius: 50px;
+    width: 50%;
+  }
+
+  .MuiSlider-root {
+    width: 100% !important;
+  }
+
+  .dice-footer-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 500px;
+    width: 500px;
+    transform: translateX(-50%);
+  }
+
+  .dice-footer {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--very-dark-back);
+  }
+
+  .multiplier,
+  .roll-over,
+  .win-chance {
+    display: table-cell;
+  }
+
+  .mult-value,
+  .win-value {
+    font: inherit;
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 120px;
+    border-radius: 5px;
+    padding: 0 10px;
+    vertical-align: middle;
+    border-color: var(--background);
+    border-style: inset;
+  }
+
+  .roll-value {
+    margin-top: 5px;
+    display: table;
+    background-color: var(--dark-background);
+    width: 120px;
+    border-radius: 5px;
+    vertical-align: middle;
+    border: 2px inset;
+    border-color: var(--background);
+  }
+}
+
+@media only screen and (min-width: 1650px) {
+  .dice-game-wrapper {
+    position: relative;
+    left: 10%;
+    top: 20%;
+    display: flex;
+    background-color: var(--dark-background);
+    width: 1100px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .side-bar {
+    background-color: var(--dice-sidebar);
+    width: 25%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-color: var(--background);
+  }
+
+  #manual,
+  #auto {
+    width: 50%;
+  }
+
+  #manual {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #auto {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .bet-amount {
+    margin: 10px 20px;
+  }
+
+  .bet-amount-input {
+    background-color: var(--very-dark-back);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  .bet-input {
+    background-color: var(--dark-background);
+    border: none;
+    height: 70%;
+    margin: 5px 5px;
+    padding: 0 5px;
+    width: 70%;
+  }
+
+  .bet-input-mult {
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 15%;
+  }
+
+  .bet-input-mult:hover {
+    background-color: var(--dark-background);
+  }
+
+  .win-amount {
+    margin: 10px 20px;
+    display: table;
+  }
+
+  .win-amount-text {
+    width: 200px;
+    background-color: var(--dark-background);
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+
+  .slider {
+    position: absolute;
+    background-color: var(--very-dark-back);
+    top: 250px;
+    left: 700px;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    border-radius: 50px;
+  }
+
+  .dice-footer-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 690px;
+    width: 750px;
+    transform: translateX(-50%);
+  }
+
+  .dice-footer {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--very-dark-back);
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .dice-game-wrapper {
+    position: relative;
+    left: 10%;
+    top: 20%;
+    display: flex;
+    background-color: var(--dark-background);
+    width: 1200px;
+    height: 600px;
+    border-radius: 10px;
+  }
+
+  .side-bar {
+    background-color: var(--dice-sidebar);
+    width: 25%;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .type-of-play {
+    display: flex;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-color: var(--background);
+  }
+
+  #manual,
+  #auto {
+    width: 50%;
+  }
+
+  #manual {
+    border-radius: 5px 0 0 5px;
+  }
+
+  #auto {
+    border-radius: 0 5px 5px 0;
+  }
+
+  .bet-amount {
+    margin: 10px 20px;
+  }
+
+  .bet-amount-input {
+    background-color: var(--very-dark-back);
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+  }
+
+  .bet-input {
+    background-color: var(--dark-background);
+    border: none;
+    height: 70%;
+    margin: 5px 5px;
+    padding: 0 5px;
+    width: 70%;
+  }
+
+  .bet-input-mult {
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    width: 15%;
+  }
+
+  .bet-input-mult:hover {
+    background-color: var(--dark-background);
+  }
+
+  .win-amount {
+    margin: 10px 20px;
+    display: table;
+  }
+
+  .win-amount-text {
+    width: 240px;
+    background-color: var(--dark-background);
+    padding: 10px 10px;
+    border-radius: 5px;
+  }
+
+  .slider {
+    position: absolute;
+    background-color: var(--very-dark-back);
+    top: 250px;
+    left: 750px;
+    transform: translate(-50%, -50%);
+    padding: 0 30px;
+    border-radius: 50px;
+  }
+
+  .dice-footer-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 750px;
+    width: 800px;
+    transform: translateX(-50%);
+  }
+
+  .dice-footer {
+    display: table;
+    table-layout: fixed;
+    border-spacing: 10px;
+    height: 90px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--very-dark-back);
+  }
+}
+
+.animation-asset {
+  position: absolute;
+  top: -39px;
+  left: 0px;
+  background-color: transparent;
+  width: 92%;
+  z-index: 999999999;
+}
+
+.result-value {
+  margin-left: 7px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  transform: rotate(-45deg);
+  align-items: center;
+  border-radius: 50% 50% 50% 0;
+  justify-content: center;
+}
+
+.results-value-text {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 0.76rem;
+  color: white;
+  transform: rotate(45deg);
+}
+
+.fair-buttons {
+  position: absolute;
+  display: flex;
+  bottom: -50px;
+  left: 25px;
+}
+
+.fair {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background-color: var(--dark-background);
+}
+
+.fair:active {
+  background-color: var(--very-dark-back);
+}
+
+.fairness-popup-wrapper {
+  z-index: 100000;
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+}
+
+.fairness-popup {
+  z-index: 100000;
+  position: fixed;
+  width: 30vw;
+  height: 40vh;
+  background-color: var(--background);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -5px 5px 20px 1px var(--shadows);
+  border-radius: 5px;
+}
+
+.fairness-close {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: var(--very-dark-back);
+}
+
+.server-seed-header {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  color: white;
+}
+
+.server-seed,
+.client-seed,
+.nonce,
+.server-seed-un {
+  font-size: 14px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: var(--dark-background);
+  left: 5%;
+  width: 90%;
+  height: 30px;
+  overflow-x: auto;
+  color: white;
+}
+
+.server-seed {
+  top: 10%;
+}
+
+.client-seed {
+  top: 30%;
+}
+
+.nonce {
+  top: 50%;
+}
+
+.server-seed-un {
+  top: 70%;
+}
+
+.client-seed-header {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  color: white;
+}
+
+.nonce-header {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  color: white;
+}
+
+.server-seed-un-header {
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  color: white;
+}
+
+.change-seed {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var(--submit);
+  border: none;
+  border-radius: 5px 0 5px 0;
+  width: 70px;
+  height: 40px;
+}
+
+.change-seed:hover {
+  background-color: var(--submit-active);
+}
+
+.prev-scores {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.prev-score-value {
+  padding: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.score-table-dice {
+  margin-top: 250px;
+}
+
+.on-win {
+  background-color: var(--very-dark-back);
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.increase-value {
+  background-color: var(--dark-background);
+  border: none;
+  height: 70%;
+  margin: 5px 5px;
+  padding: 0 5px;
+  width: 70%;
+}
+
+.reset,
+.increase-by {
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.reset:hover,
+.increase-by:hover {
+  background-color: var(--dark-background);
+}
+
+.volume-slider-wrapper {
+  margin-left: 20px;
+  display: flex;
+  width: 200px;
+}
+
+.volume-slider {
+  margin-left: 10px;
+}

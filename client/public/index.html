@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="RS3 and OldSchool RuneScape gambling. Giveaways every hour! Provably fair dicing. 24 hour cash-ins. No fees. What are you waiting for?"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Rune Empire</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- This is the code snippet for purechat. Dont change or remove. -->
+    <script type="text/javascript" data-cfasync="false">
+      window.purechatApi = {
+        l: [],
+        t: [],
+        on: function () {
+          this.l.push(arguments);
+        },
+      };
+
+      function CheckChatOpen() {
+        var chat = document.getElementById("chat-content");
+        return chat;
+      }
+
+      // positioning the chat box script
+      function position(elem) {
+        var elem1, elem2;
+        elem2 = elem.getElementsByClassName(
+          "purechat-launcher-frame-bottom-right"
+        )[0];
+        elem1 = elem.getElementsByClassName(
+          "purechat-messenger-frame-bottom-right"
+        )[0];
+
+        var chat = CheckChatOpen();
+
+        var stop = false;
+        if (elem1 !== undefined && elem1 !== null) {
+          if (chat) {
+            elem1.style.right = 410 + "px";
+            elem1.style.bottom = `${0}px`;
+          } else {
+            elem1.style.right = 10 + "px";
+            elem1.style.bottom = `${0}px`;
+          }
+
+          stop = true;
+        }
+        if (elem2 !== undefined && elem2 !== null) {
+          if (chat) {
+            elem2.style.right = 410 + "px";
+            elem2.style.bottom = `${0}px`;
+          } else {
+            elem2.style.right = 10 + "px";
+            elem2.style.bottom = `${0}px`;
+          }
+          stop = true;
+        }
+        if (!stop) {
+          requestAnimationFrame(() => position(elem));
+        }
+      }
+
+      function positionOpen(elem) {
+        var elem1;
+        elem1 = elem.getElementsByClassName(
+          "purechat-messenger-frame-bottom-right"
+        )[0];
+
+        var chat = CheckChatOpen();
+
+        var stop = false;
+        if (elem1 !== undefined && elem1 !== null) {
+          if (chat) {
+            elem1.style.right = 410 + "px";
+            elem1.style.bottom = `${0}px`;
+          } else {
+            elem1.style.right = 10 + "px";
+            elem1.style.bottom = `${0}px`;
+          }
+
+          stop = true;
+        }
+        if (!stop) {
+          requestAnimationFrame(() => position(elem));
+        }
+      }
+      function positionClosed(elem) {
+        var elem1;
+        elem1 = elem.getElementsByClassName(
+          "purechat-launcher-frame-bottom-right"
+        )[0];
+
+        var chat = CheckChatOpen();
+
+        var stop = false;
+        if (elem1 !== undefined && elem1 !== null) {
+          if (chat) {
+            elem1.style.right = 410 + "px";
+            elem1.style.bottom = `${0}px`;
+          } else {
+            elem1.style.right = 10 + "px";
+            elem1.style.bottom = `${0}px`;
+          }
+
+          stop = true;
+        }
+        if (!stop) {
+          requestAnimationFrame(() => position(elem));
+        }
+      }
+
+      purechatApi.on("chatbox:ready", function () {
+        purechatApi.set("visitor.name", window.localStorage.getItem("name")); // Sets the visitor name to "Joe Doe"
+        var elem = document.getElementById("purechat-container");
+
+        if (elem !== null) {
+          position(elem);
+        }
+      });
+
+      purechatApi.on("chatbox:expand", function (args) {
+        var elem = document.getElementById("purechat-container");
+
+        if (elem !== null) {
+          positionOpen(elem);
+        }
+      });
+
+      purechatApi.on("chatbox:collapse", function (args) {
+        var elem = document.getElementById("purechat-container");
+
+        if (elem !== null) {
+          setTimeout(() => positionClosed(elem), 1);
+        }
+      });
+
+      (function () {
+        if (
+          window.localStorage.getItem("token") !== undefined &&
+          window.localStorage.getItem("token") !== null
+        ) {
+          var done = false;
+          var script = document.createElement("script");
+          script.async = true;
+          script.type = "text/javascript";
+          script.src = "https://app.purechat.com/VisitorWidget/WidgetScript";
+          document.getElementsByTagName("HEAD").item(0).appendChild(script);
+          script.onreadystatechange = script.onload = function (e) {
+            if (
+              !done &&
+              (!this.readyState ||
+                this.readyState == "loaded" ||
+                this.readyState == "complete")
+            ) {
+              var w = new PCWidget({
+                c: "a2794a2a-1a50-48f3-bcc7-3647d34fbe6a",
+                f: true,
+              });
+              done = true;
+            }
+          };
+        }
+      })();
+    </script>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

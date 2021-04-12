@@ -1,0 +1,19 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - cd cient
+    - npm ci
+    - CI=false npm run build
+
+build:
+  stage: build
+  script:
+    - cd server
+    - npm ci

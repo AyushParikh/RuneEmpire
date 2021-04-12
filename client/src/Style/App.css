@@ -1,0 +1,70 @@
+:root {
+  --global-white: #fff;
+  --global-black: #000;
+  --global-grey: #333;
+  --user-color: #3333ff;
+  --background: #183040;
+  --dark-background: #610c03;
+  --very-dark-back: #1d2e3a;
+  --chat-footer-background: #161225;
+  --shadows: #0d161b;
+  --scrollbar: #570101;
+  --dice-sidebar: #4d0202;
+  --submit: #015c01;
+  --submit-active: #026d02;
+  --message-background: #e0b378;
+}
+
+#root {
+  overflow-y: auto;
+}
+
+body {
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar {
+  height: 12px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar);
+  -webkit-border-radius: 1ex;
+  border-radius: 1ex;
+}
+
+.footer {
+  background-color: var(--very-dark-back);
+  height: fit-content;
+  position: relative;
+  bottom: 0;
+  z-index: 999999999;
+}
+
+.footer-text {
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  position: absolute;
+  width: 100%;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+@media only screen and (max-width: 950px) {
+  .footer {
+    height: 100px;
+  }
+}
+
+.logo {
+  height: 75px;
+}

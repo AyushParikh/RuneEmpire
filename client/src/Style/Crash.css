@@ -1,0 +1,74 @@
+#crash-wrapper {
+  position: absolute;
+  width: 1000px;
+  height: 500px;
+  background-color: var(--dark-background);
+  border-radius: 10px;
+}
+
+.markers {
+  margin-left: -20px;
+  position: absolute;
+  height: 100%;
+  display: flex;
+}
+
+#result-val {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+}
+
+#crash-canvas {
+  position: absolute;
+  left: 300px;
+  top: 25px;
+  transform: translate(-50%, -50%);
+}
+
+#canvas {
+  position: absolute;
+  z-index: 2;
+}
+
+#canvas-axis-x {
+  position: absolute;
+  z-index: 1;
+  top: -25px;
+}
+
+#canvas-axis-y {
+  position: absolute;
+  left: -25px;
+  z-index: 1;
+}
+
+#crash-side {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--dice-sidebar);
+  border-radius: 10px 0 0 10px;
+}
+
+#crash-users {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 80%;
+  border-radius: 5px;
+  height: 45%;
+  background-color: var(--dark-background);
+}
+
+.user-name {
+  position: absolute;
+  left: 10px;
+}
+
+.user-bet {
+  position: absolute;
+  right: 20px;
+}

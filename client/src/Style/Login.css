@@ -1,0 +1,88 @@
+.login-page {
+  width: calc(100vw - 400px);
+  height: 100%;
+}
+
+.login-title {
+  text-align: center;
+  margin-top: 30vh;
+  transform: translateY(-50%);
+}
+
+.error-text {
+  text-align: center;
+  color: #ff0000;
+}
+
+.username,
+.password,
+.email {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.username-input,
+.password-input,
+.email-input {
+  width: 200px;
+}
+
+.login-button-wrapper {
+  display: flex;
+  margin-left: calc(calc(100vw - 400px) * 0.42);
+  margin-top: 30px;
+}
+
+.forgot-password {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: #555555;
+}
+
+.login-button,
+.register-button {
+  width: 75px;
+  height: 35px;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.login-button:hover,
+.register-button:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+}
+
+.register-button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.reset-buttons-wrapper {
+  display: flex;
+  margin-left: calc(calc(100vw - 400px) * 0.465);
+  margin-top: 30px;
+}
+
+.reset-button {
+  width: 100px;
+  height: 40px;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.reset-button:hover {
+  background-color: darkgreen;
+  cursor: pointer;
+}

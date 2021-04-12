@@ -1,0 +1,140 @@
+.controls {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  .button-container {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .blackjack-bet {
+    margin-top: 40px;
+  }
+  .blackjack-buttons {
+    margin: 0;
+    margin-top: 20px;
+    border: 0;
+    padding: 0;
+    width: 80%;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    font-size: 24px;
+    background: $button-primary-bg;
+    color: #000;
+    position: relative;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+    &:disabled {
+      opacity: 0.2;
+    }
+    &:active {
+      transform: translate3d(0, 1px, 0);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    &.deal {
+      animation: pulse 4s 2s infinite cubic-bezier(0.66, 0, 0, 1);
+      &:hover {
+        animation: none;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba($button-primary-bg, 0.7);
+      }
+      // animation ends here (creates delay between keyframes)
+      50% {
+        box-shadow: 0 0 0 45px rgba(darken($button-primary-bg, 30%), 0);
+      }
+      100% {
+        box-shadow: 0 0 0 45px rgba(darken($button-primary-bg, 30%), 0);
+      }
+    }
+    &.stand,
+    &.hit,
+    &.split,
+    &.double {
+      background-color: $generic-button-bg;
+      width: 40%;
+      left: 0%;
+    }
+    &.hit {
+      background-color: $button-primary-bg;
+    }
+    &.stand {
+      background-color: $button-secondary-bg;
+    }
+    span {
+      position: absolute;
+      bottom: -20px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(lighten(#000, 5%), 0.6);
+    }
+  }
+
+  // animations for control buttons
+  .button-container {
+    .blackjack-buttons {
+      transition: transform 0.2s $bezier;
+      &:nth-child(2) {
+        transition-delay: 0.1s;
+      }
+    }
+    &.buttons-enter {
+      .blackjack-buttons {
+        transition-delay: 0.3s;
+        &:nth-child(2) {
+          transition-delay: 0.2s;
+        }
+      }
+    }
+    &.buttons-enter,
+    &.buttons-leave.buttons-leave-active {
+      .blackjack-buttons {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+    &.buttons-enter.buttons-enter-active,
+    &.buttons-leave {
+      .blackjack-buttons {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
+  // table edge (wood)
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    // blend with the inset box-shadow
+    z-index: -1;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    // show bg-color while the image is loading
+    background-color: $secondary-color;
+    background-repeat: repeat;
+    border-radius: 10px 0 0 10px;
+    @media #{$retina} {
+      background-size: 200px 169px;
+    }
+  }
+}
+
+@media #{$tablet} {
+  .controls {
+    height: 100%;
+  }
+}

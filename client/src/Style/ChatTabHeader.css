@@ -1,0 +1,22 @@
+.chat-nav-bar {
+  background-color: var(--dark-background);
+  height: 60px;
+  box-shadow: 8px 0 10px 5px var(--shadows);
+}
+
+.chat-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  color: var(--global-black);
+  cursor: pointer;
+}
+
+.chat-icon-line {
+  width: 150%;
+  margin: 0;
+  right: -25%;
+  position: absolute;
+  top: 40px;
+  border-color: red;
+}

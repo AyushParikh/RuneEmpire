@@ -1,0 +1,172 @@
+a {
+  display: flex;
+  color: var(--global-white);
+}
+
+.nav-bar {
+  position: fixed;
+  height: 60px;
+  box-shadow: 0 0 10px 3px var(--shadows);
+  width: calc(100vw - 400px);
+  background-color: var(--background);
+  z-index: 10000;
+}
+
+.logo-wrapper {
+  position: fixed;
+  top: 0px;
+  left: -10px;
+}
+
+.oscasino-img {
+  width: 250px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.nav-contents {
+  margin-top: 15px;
+  margin-left: calc(40vw);
+  display: flex;
+}
+
+.link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  font-weight: bold;
+  list-style: none;
+  color: var(--global-white);
+  padding: 5px 5px 5px 5px;
+  background-color: var(--dark-background);
+  height: 50%;
+  border-radius: 5px;
+}
+
+.link-hover {
+  width: 75px;
+  background-color: var(--submit);
+  position: absolute;
+  margin: -5px 120px;
+  padding: 5px 5px;
+  border-radius: 0 5px 5px 0;
+}
+
+.link-hover:hover {
+  background-color: var(--submit-active);
+}
+
+@media all and (max-width: 1200px) {
+  .nav-contents {
+    margin-left: calc(5vw + 250px);
+    display: flex;
+  }
+}
+@media all and (max-width: 950px) {
+  .nav-contents {
+    margin-left: calc(5vw + 250px);
+    display: flex;
+  }
+
+  .link {
+    display: none !important;
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .nav-contents {
+    margin-left: calc(5vw + 250px);
+    display: flex;
+  }
+
+  .nav-bar {
+    width: 100%;
+  }
+}
+
+.menu {
+  flex: 2;
+  margin-top: -15px;
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+  color: var(--global-white);
+}
+
+.menu-wrapper {
+  position: absolute;
+  right: 0px;
+  top: 60px;
+  background-color: var(--dark-background);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+}
+
+.menu-items {
+  padding: 0;
+  margin: 5px;
+  list-style: none;
+  width: 100px;
+}
+
+.menu-item {
+  padding-left: 0px;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: var(--global-white);
+}
+
+.menu-item:last-child {
+  margin-bottom: 0px;
+}
+
+.menu-item:hover {
+  color: red;
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.menu-item-text {
+  position: relative;
+  text-align: left;
+  font-size: 14px;
+  margin-left: 0px;
+  margin-top: 5px;
+}
+
+.login-direct {
+  position: absolute;
+  display: table;
+  right: 0;
+  margin-right: 20px;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.login-direct-button,
+.register-direct-button {
+  display: table-cell;
+  text-decoration: none;
+  width: 100px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.register-direct-button {
+  background-color: var(--dark-background);
+}
+
+.login-direct-button:hover,
+.register-direct-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}

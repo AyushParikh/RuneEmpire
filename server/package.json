@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend For OSRSCasino App",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "prod": "NODE_ENV=prod nodemon server.js"
+  },
+  "author": "Matthew Ramsden",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "loadash": "^1.0.0",
+    "lodash": "^4.17.15",
+    "node-pre-gyp": "^0.15.0",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.3",
+    "socket.io": "^2.3.0",
+    "sqlite3": "^4.2.0",
+    "uuid": "^8.0.0",
+    "uuidv4": "^6.0.8"
+  }
+}

@@ -1,0 +1,309 @@
+#coin-page {
+  height: 100%;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+#coin-game {
+  margin-left: 50px;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100vw - 500px);
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 950px) {
+  #coin-game {
+    margin-left: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    overflow-y: auto;
+    margin-bottom: 50px;
+  }
+
+  .player1-join {
+    top: 25% !important;
+    left: 50% !important;
+  }
+
+  .player2-join {
+    top: 75% !important;
+    right: 50% !important;
+  }
+
+  .player-1-bet,
+  .player-1-name,
+  .player-2-bet,
+  .player-2-name {
+    font-size: 12px !important;
+  }
+
+  .counter {
+    top: calc(100% - 20px) !important;
+  }
+
+  .coin {
+    width: 75px !important;
+    height: 75px !important;
+  }
+
+  .side-a,
+  .side-b {
+    background-size: 75px 75px !important;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.coin-wrapper {
+  position: relative;
+  width: calc(calc(100% / 3) - 20px);
+  height: 300px;
+  background-color: var(--dark-background);
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.anim-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.coin-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+.coin {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.play-coin {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.player1-join,
+.player2-join {
+  position: absolute;
+  top: 50%;
+  background-color: var(--background);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+}
+
+.add-game {
+  background-color: var(--background);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: white;
+  margin: 10px;
+}
+
+.player1-join {
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+
+.player2-join {
+  right: 20%;
+  transform: translate(50%, -50%);
+}
+
+.counter {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5pc;
+}
+
+.player-1-name,
+.player-1-bet,
+.player-2-name,
+.player-2-bet {
+  font-size: 1.5pc;
+  text-align: center;
+  color: white;
+}
+
+.coin div {
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 45px rgba(255, 255, 255, 0.3),
+    0 12px 20px -10px rgba(0, 0, 0, 0.4);
+}
+.side-a {
+  background-image: url("../Images/coinheads.png");
+  background-size: 100px 100px;
+  background-color: #222222;
+  background-repeat: no-repeat;
+}
+.side-b {
+  background-image: url("../Images/cointails.png");
+  background-size: 100px 100px;
+  background-color: #222222;
+  background-repeat: no-repeat;
+}
+
+.player1-coin,
+.player2-coin {
+  color: white;
+  position: absolute;
+  text-align: center;
+  padding-top: calc(100% / 2 - 10px);
+}
+
+.player2-coin {
+  transform: rotate(180deg);
+}
+
+.coin {
+  transition: -webkit-transform 1s ease-in;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+.coin div {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+}
+.side-a {
+  z-index: 100;
+}
+.side-b {
+  -webkit-transform: rotateY(-180deg);
+}
+
+.coin-result {
+  text-align: center;
+}
+
+.coin.heads {
+  -webkit-animation: flipHeads 4.5s linear forwards;
+  -moz-animation: flipHeads 4.5s linear forwards;
+  -o-animation: flipHeads 4.5s linear forwards;
+  animation: flipHeads 4.5s linear forwards;
+}
+.coin.tails {
+  -webkit-animation: flipTails 4.5s linear forwards;
+  -moz-animation: flipTails 4.5s linear forwards;
+  -o-animation: flipTails 4.5s linear forwards;
+  animation: flipTails 4.5s linear forwards;
+}
+
+@keyframes flipHeads {
+  0% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0) scale(1) rotateY(0);
+  }
+  20% {
+    -webkit-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    transform: rotateX(720deg) scale(1.2) rotateY(15deg);
+  }
+  30% {
+    -webkit-transform: rotateX(990deg);
+    -moz-transform: rotateX(990deg);
+    transform: rotateX(990deg) scale(1.2) rotateY(30deg);
+  }
+  40% {
+    -webkit-transform: rotateX(1260deg);
+    -moz-transform: rotateX(1260deg);
+    transform: rotateX(1260deg) scale(1.5) rotateY(15deg);
+  }
+  50% {
+    -webkit-transform: rotateX(1440deg);
+    -moz-transform: rotateX(1440deg);
+    transform: rotateX(1440deg) scale(2) rotateY(0);
+  }
+  60% {
+    -webkit-transform: rotateX(1260deg);
+    -moz-transform: rotateX(1260deg);
+    transform: rotateX(1260deg) scale(1.5) rotateY(15deg);
+  }
+  70% {
+    -webkit-transform: rotateX(990deg);
+    -moz-transform: rotateX(990deg);
+    transform: rotateX(990deg) scale(1.5) rotateY(30deg);
+  }
+  80% {
+    -webkit-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    transform: rotateX(720deg) scale(1.2) rotateY(15deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0) scale(1) rotateY(0);
+  }
+}
+@keyframes flipTails {
+  0% {
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    transform: rotateX(0) scale(1) rotateY(0);
+  }
+  20% {
+    -webkit-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    transform: rotateX(720deg) scale(1.2) rotateY(15deg);
+  }
+  30% {
+    -webkit-transform: rotateX(990deg);
+    -moz-transform: rotateX(990deg);
+    transform: rotateX(990deg) scale(1.2) rotateY(30deg);
+  }
+  40% {
+    -webkit-transform: rotateX(1260deg);
+    -moz-transform: rotateX(1260deg);
+    transform: rotateX(1260deg) scale(1.5) rotateY(15deg);
+  }
+  50% {
+    -webkit-transform: rotateX(1440deg);
+    -moz-transform: rotateX(1440deg);
+    transform: rotateX(1440deg) scale(2) rotateY(0);
+  }
+  60% {
+    -webkit-transform: rotateX(1260deg);
+    -moz-transform: rotateX(1260deg);
+    transform: rotateX(1260deg) scale(1.5) rotateY(15deg);
+  }
+  70% {
+    -webkit-transform: rotateX(990deg);
+    -moz-transform: rotateX(990deg);
+    transform: rotateX(990deg) scale(1.5) rotateY(30deg);
+  }
+  80% {
+    -webkit-transform: rotateX(720deg);
+    -moz-transform: rotateX(720deg);
+    transform: rotateX(720deg) scale(1.2) rotateY(15deg);
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    transform: rotateX(180deg) scale(1) rotateY(0);
+  }
+}

@@ -1,0 +1,103 @@
+html {
+  overflow: hidden;
+}
+
+html,
+body,
+#root,
+.app {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+}
+
+.app {
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  box-shadow: inset 1px 1px 120px 30px rgba(lighten(#000, 1%), 0.5);
+  border-radius: 10px;
+  header {
+    flex: 0 0 auto;
+  }
+  > section {
+    flex: 1 1 auto;
+    width: 70%;
+    margin-left: 0%;
+    margin-top: 4%;
+    .hand {
+      flex: 1 0 50%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.bj-insurance-background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: absolute;
+  .bj-insurance {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: crimson;
+  }
+}
+
+@media #{$tablet-down} and (min-height: 580px) {
+  .app > section {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .bj-wrapper {
+    height: 500px;
+  }
+
+  .blackjack-bet {
+    margin-left: 50%;
+    width: 90%;
+    transform: translateX(-50%);
+  }
+
+  .bj-bet {
+    width: fit-content;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .bj-side {
+    position: absolute;
+  }
+
+  .hand-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+  }
+
+  .hand-pos {
+    position: relative;
+    display: flex;
+  }
+
+  .dealer-hand {
+    width: 50%;
+  }
+
+  .player-hand {
+    width: 50%;
+  }
+
+  .cards {
+    position: relative;
+  }
+}

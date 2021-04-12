@@ -1,0 +1,184 @@
+.plinko-page {
+  width: calc(100vw - 400px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+@media all and (max-width: 1300px) {
+  .plinko-page {
+    width: 100vw;
+  }
+}
+
+.risk,
+.rows {
+  margin-left: 40%;
+  transform: translateX(-50%);
+}
+
+#risk-dropdown,
+#rows-dropdown {
+  width: 200px;
+}
+
+.MuiList-root {
+  background-color: var(--dark-background);
+}
+
+.plinko-game-wrapper {
+  position: relative;
+  width: 900px;
+  height: 600px;
+}
+
+.plinko-game {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 600px;
+  height: 450px;
+}
+
+/* bottem should be 13.5% width has to be dynamic */
+.plinko-footer {
+  background-color: transparent;
+  position: absolute;
+  height: 5%;
+  bottom: 75px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.score-point {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.center-score-point {
+  position: relative;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.score-background {
+  cursor: help;
+  height: 30px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.win-chance-box {
+  display: table;
+  border-spacing: 30px 10px;
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-49.25%);
+  background-color: var(--very-dark-back);
+  box-shadow: 0px 5px 10px 1px var(--shadows);
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.win-chance-profit,
+.win-chance-percent {
+  display: table-cell;
+  width: 50%;
+}
+
+.win-chance-profit div,
+.win-chance-percent div {
+  background-color: var(--dark-background);
+  border-radius: 5px;
+  padding: 5px 0 5px 10px;
+}
+
+.percent-sign {
+  position: absolute;
+  right: 40px;
+}
+
+.score-table-plinko {
+  margin-top: 300px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .plinko-footer {
+    left: 39% !important;
+  }
+  .score-table-plinko {
+    margin-top: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 1650px) and (min-width: 1300px) {
+  canvas {
+    width: 600px !important;
+  }
+  .plinko-footer {
+    left: 37% !important;
+  }
+  .score-table-plinko {
+    margin-top: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 1800px) and (min-width: 1650px) {
+  .plinko-footer {
+    left: 48% !important;
+  }
+  .score-table-plinko {
+    margin-top: 400px !important;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .plinko-game-wrapper {
+    width: 100%;
+    height: 450px;
+  }
+
+  canvas {
+    width: 300px !important;
+    height: 250px !important;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .plinko-game {
+    width: 100%;
+  }
+
+  .plinko-footer {
+    position: absolute;
+    bottom: 100px;
+    width: fit-content !important;
+    bottom: 100px;
+    left: calc(50% - 20px) !important;
+    transform: translateX(-50%);
+  }
+
+  .score-background {
+    position: relative;
+  }
+
+  .prev-scores {
+    z-index: 100;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .plinko-footer {
+    left: 43% !important;
+  }
+}
+
